@@ -28,7 +28,7 @@ assert IsZero(#Roots(ChangeRing(f125, GF(p)))); // no rational points in bad dis
  
 Q125 := y^2 - f125;
 base_pt := [ -1/2, 1/8 ];
-good_affine_rat_pts_xy, done, bad_affine_rat_pts_xy, data, fake_rat_pts, bad_Qppoints:= QCModAffine(Q125,p : N := 8,printlevel:=1, base_point := base_pt);
+good_affine_rat_pts_xy, done, bad_affine_rat_pts_xy, data, fake_rat_pts, bad_Qppoints:= QCModAffine(Q125,p : N := 10, printlevel:=1, base_point := base_pt);
 
 P1 := X![-1,1,2];
 P2 := X![-1,-1,2]; 
