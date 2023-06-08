@@ -75,7 +75,7 @@ M := &*[primes[i]^exponents[i] : i in [1..#primes]];  // modulus
 J := Jacobian(X);
 
 "number of residue classes", #fake_coeffs_mod_M;
-//mws_primes := sp_new(M, good_primes, groups, 15); // compute sieving primes
+//mws_primes := sieving_primes(M, good_primes, groups, 15); // compute sieving primes
 mws_primes := [1399];
 "starting MW-sieve to exclude fake solutions";
 time done_fake, bool_list := MWSieve(J, mws_primes, M, bas, X!base_pt, fake_coeffs_mod_M : known_rat_coeffs := rat_coeffs_mod_pN );
