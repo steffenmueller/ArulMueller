@@ -17,8 +17,8 @@ ptsX := Points(X:Bound:=100);
 "Small points: ", ptsX;
 
 // Find good primes for QC
-//qc_primes, quality, exponents, groups, good_primes := 
-//        find_qc_primes(X : mws_primes_bound := 5000, qc_primes_bound := 120, number_of_bad_disks := 0, inf_modp_allowed := false, known_rat_pts := ptsX); 
+qc_primes, groups, good_primes, prime_quality := 
+        find_qc_primes(X : mws_primes_bound := 5000, qc_primes_bound := 120, number_of_bad_disks := 0, inf_modp_allowed := false, known_rat_pts := ptsX); 
 p := 29;
 // 29 looks promising for a QC+MWS computation, because
 FactoredOrder(Jacobian(ChangeRing(X, GF(1399))));
